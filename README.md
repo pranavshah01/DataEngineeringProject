@@ -1,5 +1,5 @@
 # Data Engineering Project 
-[![Build Status](https://travis-ci.org/damklis/DataEngineeringProject.svg?branch=master)](https://travis-ci.org//damklis/DataEngineeringProject) [![Coverage Status](https://coveralls.io/repos/github/damklis/DataEngineeringProject/badge.svg?branch=master)](https://coveralls.io/github/damklis/DataEngineeringProject?branch=master) [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Build Status](https://travis-ci.com/damklis/DataEngineeringProject.svg?branch=master)](https://travis-ci.org//damklis/DataEngineeringProject) [![Coverage Status](https://coveralls.io/repos/github/damklis/DataEngineeringProject/badge.svg?branch=master)](https://coveralls.io/github/damklis/DataEngineeringProject?branch=master) [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
 
 **Data Engineering Project** is an implementation of the data pipeline which consumes the latest news from RSS Feeds and makes them available for users via handy API.
@@ -52,7 +52,7 @@ It runs periodically every X minutes producing micro-batches.
 <!-- PREREQUISITES -->
 ## Prerequisites
 Software required to run the project. Install:
-- [Docker](https://docs.docker.com/get-docker/)
+- [Docker](https://docs.docker.com/get-docker/) - You must allocate a minimum of 8 GB of Docker memory resource.
 - [Python 3.8+ (pip)](https://www.python.org/)
 - [docker-compose](https://docs.docker.com/compose/install/)
 
@@ -91,23 +91,23 @@ Read detailed [documentation](api) on how to interact with data collected by pip
 Example searches:
 - see all news
 ```
-http://0.0.0.0:5000/api/v1/news/ 
+http://127.0.0.1:5000/api/v1/news/ 
 ```
 -  add `search_fields` title and description, see all of the news containing the `Robert Lewandowski` phrase
 ```
-http://0.0.0.0:5000/api/v1/news/?search=Robert%20Lewandowski 
+http://127.0.0.1:5000/api/v1/news/?search=Robert%20Lewandowski 
 ```
 
 - find news containing the `Lewandowski` phrase in their titles
 
 ```
-http://0.0.0.0:5000/api/v1/news/?search=title|Lewandowski 
+http://127.0.0.1:5000/api/v1/news/?search=title|Lewandowski 
 ```
 
 - see all of the polish news containing the `Lewandowski` phrase
 
 ```
-http://0.0.0.0:5000/api/v1/news/?search=lewandowski&language=pl
+http://127.0.0.1:5000/api/v1/news/?search=lewandowski&language=pl
 ```
 
 <!-- REFERENCES -->
